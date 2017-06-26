@@ -1,0 +1,15 @@
+.terminal-message {
+  padding-left: 4px;
+  padding-bottom: 10px;
+}
+.cursor {
+  font-size: 37px;
+  line-height: 25px;
+  padding-left: 3px;
+}
+.terminal-prompt {
+  line-height: 25px;
+}
+.terminal-line {
+  display: flex;
+}
