@@ -11,5 +11,8 @@
  * ************************************************************************* */
 
 $(".profile-img").click(function(){
-    $('.profile').animate({'top' : '10px'}, {duration : 1000});
+    $('.profile').animate({'margin-top' : '10px'}, 1000, function () {
+        $('.description').show();
+        moveProgressBar();
+    });
 });

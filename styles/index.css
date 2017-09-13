@@ -18,12 +18,17 @@
 
 /* */
 body {margin: 0; background-color: #EEE;}
+a {color: #333;  font-weight: bold;}
+::-webkit-scrollbar {
+    display: none;
+}
 
-/* Container for universe */
-#container {
-    background-color: #EEE;
-    webkit-filter: blur(3px); /* Safari 6.0 - 9.0 */
-    filter: blur(3px);
+.link-icon {
+    font-size: 50px;
+}
+
+.link-icon:hover {
+    color: #444;
 }
 
 /* General Container */
@@ -37,13 +42,16 @@ body {margin: 0; background-color: #EEE;}
     color: #333;
 }
 
+
+
 /* PROFILE */
 .profile {
-    width: 400px;
+    width: 100%;
+    max-width: 900px;
     height: 400px;
-    position: absolute;
-    left: calc(50% - 200px);
-    top: calc(50% - 200px);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: calc(50vh - 200px);
     text-align: center;
 }
 
@@ -61,8 +69,6 @@ body {margin: 0; background-color: #EEE;}
 }
 
 .profile-img:hover {
-    webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
     cursor: pointer;
 }
 
@@ -76,17 +82,81 @@ body {margin: 0; background-color: #EEE;}
 }
 
 /* DESCRIPTION */
-
 .description {
-    width: 600px;
-    margin-top: 430px;
+    width: 100%;
+    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.description-text {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+}
+
+.competences, .experiences, .formation {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.experience-description {
+    margin-top: 20px;
+}
+
+.experience-div {
+    margin-bottom: 30px;
 }
 
 .label {
     font-size: 22px;
     font-weight: bold;
+    margin-top: 25px;
+}
+
+.title {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.label-small {
+    font-size: 16px;
+}
+
+.grey {
+    color: #ddd;
+}
+
+/* BAR */
+.bar {
+    height: 30px;
+    width: 100%;
+}
+
+.bar-wrap {
+    background: #ddd;
+    margin: 20px 0;
+    overflow: hidden;
+    position: relative;
+    border-radius: 25px;
+}
+.bar-value {
+    width: 0;
+    background: #333;
+    font-size: 17px;
+    text-align: center;
+    color: #333;
+}
+.bar-text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 0;
+    bottom: 0;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 2px;
 }
 
 /* TRANSITIONS */
