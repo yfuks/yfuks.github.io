@@ -11,9 +11,16 @@
  * ************************************************************************* */
 
 // on browser resize...
+var width = $(window).width();
+var height = $(window).height();
+
 $(window).resize(function() {
-    moveProgressBar();
-    initMap();
+    var tmpWidth = $(window).width();
+    if (width != tmpWidth) {
+        width = tmpWidth;
+        initMap();
+        moveProgressBar();
+    }
 });
 
 $(".profile-img").click(function(){
