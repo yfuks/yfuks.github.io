@@ -13,12 +13,14 @@
 // on browser resize...
 $(window).resize(function() {
     moveProgressBar();
+    initMap();
 });
 
 $(".profile-img").click(function(){
     $('.profile').animate({'margin-top' : '10px'}, 1000, function () {
         $('.description').show();
         moveProgressBar();
+        initMap();
     });
 });
 

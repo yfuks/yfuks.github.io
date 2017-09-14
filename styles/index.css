@@ -48,7 +48,14 @@ a {color: #333;  font-weight: bold;}
     color: #333;
 }
 
+#map {
+    width: 100%;
+    height: 400px;
+}
 
+.map-container {
+    margin: 0px 15px;
+}
 
 /* PROFILE */
 .profile {
@@ -87,13 +94,6 @@ a {color: #333;  font-weight: bold;}
     animation-duration: 1s;
 }
 
-/* TABLE OF CONTENT */
-.content-links {
-    display: list-item;
-    margin-left: 25px;
-    font-size: 20px;
-}
-
 /* DESCRIPTION */
 .description {
     width: 100%;
@@ -108,9 +108,13 @@ a {color: #333;  font-weight: bold;}
     margin-bottom: 30px;
 }
 
-.competences, .experiences, .formation, .realisation, .table-content {
+.competences, .experiences, .formation, .realisation {
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.competences-icon {
+    font-size: 35px;
 }
 
 .experience-description {
@@ -130,6 +134,21 @@ a {color: #333;  font-weight: bold;}
 .title {
     font-size: 36px;
     font-weight: bold;
+}
+
+.title:hover .hash-link {
+    visibility: visible;
+}
+
+.hash-link {
+    color: #555;
+    visibility: hidden;
+    text-decoration: none;
+}
+
+.hash-link:hover {
+    text-decoration: underline;
+    color: #333;
 }
 
 .label-small {

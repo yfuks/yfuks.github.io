@@ -27,17 +27,13 @@
             <div class="description-text">
                 Développeur Full Stack Javascript à la recherche de nouveaux défis, auparavant CTO chez <a target="_blank" href="https://www.facebook.com/VRsity/">VRSity</a> et étudiant à <a target="_blank" href="http://www.42.fr/">42</a>.
             </div>
-            <div class="table-content">
-                <h1 class="title">Table des matières</h1>
-                <a class="content-links" href="#competence">Compétences</a>
-                <a class="content-links" href="#experience">Expériences</a>
-                <a class="content-links" href="#formation">Formation</a>
-                <a class="content-links" href="#realisation">Réalisations</a>
-                <a class="content-links" href="#links">Liens</a>
-            </div>
+            <div class="map-container"><div id="map"></div></div>
             <div class="competences">
-                <h1 class="title" id="competence">Compétences</h1>
-                <div class="label-small">Hard skills</div>
+                <h1 class="title" id="competence">
+                    Compétences
+                    <a class="hash-link" href="#competence">#</a>
+                </h1>
+                <i class="fa fa-code competences-icon" aria-hidden="true"></i>
                 <div class="bar bar-wrap" data-progress-percent="98">
                     <div class="bar bar-value"></div>
                     <div class="bar-text grey">Javascript</div>
@@ -74,7 +70,7 @@
                     <div class="bar bar-value"></div>
                     <div class="bar-text grey">Anglais</div>
                 </div>
-                <div class="label-small">Soft skills</div>
+                <i class="fa fa-podcast competences-icon" aria-hidden="true"></i>
                 <div class="bar bar-wrap" data-progress-percent="100">
                     <div class="bar bar-value"></div>
                     <div class="bar-text grey">Créativité</div>
@@ -101,7 +97,10 @@
                 </div>
             </div>
             <div class="experiences">
-                <h1 class="title" id="experience">Expériences</h1>
+                <h1 class="title" id="experience">
+                    Expériences
+                    <a class="hash-link" href="#experience">#</a>
+                </h1>
                 <div class="experience-div">
                     <div class="label"><a target="_blank" href="https://www.facebook.com/VRsity/">VRSity</a> - <strong>CTO/Co-founder</strong></div>
                     <div class="label-small">de Février 2017 à Aujourd'hui (8 mois)</div>
@@ -153,7 +152,10 @@
                 </div>
             </div>
             <div class="formation">
-                <h1 class="title" id="formation">Formation</h1>
+                <h1 class="title" id="formation">
+                    Formation
+                    <a class="hash-link" href="#formation">#</a>
+                </h1>
                 <div class="experience-div">
                     <div class="label"><a href="http://www.42.fr" target="_blank">Ecole 42</a></div>
                     <div class="label-small">de Novembre 2014 à Aujourd'hui (3 ans)</div>
@@ -204,7 +206,10 @@
                 </div>
             </div>
             <div class="realisation">
-                <h1 class="title" id="realisation">Réalisations</h1>
+                <h1 class="title" id="realisation">
+                    Réalisations
+                    <a class="hash-link" href="#realisation">#</a>
+                </h1>
                 <div class="experience-div">
                     <div class="label"><a href="http://www.42.fr" target="_blank">Ecole 42</a> - 42 Notifier</div>
                     <div class="label-small">de Juillet 2017 à Aujourd'hui (3 mois)</div>
@@ -241,5 +246,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/home.js"></script>
     <script src="js/bar.js"></script>
+    <script src="js/map.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxkS3ewCFPi5Uz1RhQ_1UMzkZB7FqKdWg&callback=initMap"></script>
 </body>
 </html>
