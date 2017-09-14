@@ -15,6 +15,13 @@ $(window).resize(function() {
     moveProgressBar();
 });
 
+$(".profile-img").click(function(){
+    $('.profile').animate({'margin-top' : '10px'}, 1000, function () {
+        $('.description').show();
+        moveProgressBar();
+    });
+});
+
 // SIGNATURE PROGRESS
 function moveProgressBar() {
     var list = $('.bar-wrap');
@@ -32,3 +39,4 @@ function moveProgressBar() {
         }, animationLength);
     }
 }
+
