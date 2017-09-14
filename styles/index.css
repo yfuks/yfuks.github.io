@@ -23,8 +23,14 @@ a {color: #333;  font-weight: bold;}
     display: none;
 }
 
+.links {
+    text-align: center;
+}
+
 .link-icon {
     font-size: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .link-icon:hover {
@@ -81,6 +87,13 @@ a {color: #333;  font-weight: bold;}
     animation-duration: 1s;
 }
 
+/* TABLE OF CONTENT */
+.content-links {
+    display: list-item;
+    margin-left: 25px;
+    font-size: 20px;
+}
+
 /* DESCRIPTION */
 .description {
     width: 100%;
@@ -95,7 +108,7 @@ a {color: #333;  font-weight: bold;}
     margin-bottom: 30px;
 }
 
-.competences, .experiences, .formation {
+.competences, .experiences, .formation, .realisation, .table-content {
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -115,7 +128,7 @@ a {color: #333;  font-weight: bold;}
 }
 
 .title {
-    font-size: 26px;
+    font-size: 36px;
     font-weight: bold;
 }
 
@@ -125,6 +138,13 @@ a {color: #333;  font-weight: bold;}
 
 .grey {
     color: #ddd;
+}
+
+.made {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 15px;
+    padding-bottom: 15px;
 }
 
 /* BAR */
