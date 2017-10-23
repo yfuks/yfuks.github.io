@@ -1,0 +1,38 @@
+.container {
+  background-image: url("/img/home-low-poly.jpg");
+}
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+.app-title {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 70px;
+}
+
+.button {
+  text-align: center;
+  background-color: #333;
+  color: #DDD;
+  width: 140px;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 15px;
+  border-radius: 7px;
+  margin-bottom: 80px;
+}
+
+.button:hover {
+  background-color: #DDD;
+  color: #333;
+}
