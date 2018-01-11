@@ -1,0 +1,101 @@
+.iphone {
+    height: 700px;
+    width: 342px;
+    margin-left: 28vw;
+    margin-top: calc(50vh - 347px);
+    position: relative;
+    z-index: 1;
+    margin-right: 30px;
+}
+
+.iphone * {
+    box-sizing: border-box;
+    display: block;
+}
+
+.bazzel {
+    background: rgb(32, 33, 38);
+    border-radius: 54px;
+    box-shadow: inset 0 0 2px 2px rgb(39, 38, 43), inset 0 0 0 6px rgb(31, 32, 36);
+    height: 700px;
+    padding: 15px 22px;
+    width: 342px;
+    z-index: 1;
+}
+
+.header {
+    background: linear-gradient(rgb(31, 32, 36), rgb(29, 29, 34));
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    height: 20px;
+    left: 50%;
+    margin-left: -82px;
+    position: absolute;
+    top: 15px;
+    width: 164px;
+    z-index: 199;
+}
+
+.sensor-1, .sensor-2  {
+    content: "";
+    position: absolute;
+    background: rgb(23, 23, 25);
+}
+
+.sensor-1 {
+    border-radius: 2.5px;
+    height: 5px;
+    width: 40px;
+    left: 50%;
+    margin-left: -20px;
+    top: 4px;
+}
+
+.sensor-2 {
+    border-radius: 50%;
+    height: 9px;
+    width: 9px;
+    left: 50%;
+    margin-left: 35px;
+    top: 1px;
+}
+
+.screen {
+    background: rgb(208, 208, 210);
+    background-image: url("/img/iPhone%20X2.png");
+    background-position: center center;
+    background-size: cover;
+    border-radius: 32px;
+    height: 670px;
+    position: relative;
+    width: 314px;
+    margin-left: -8px;
+}
+
+.volume-button, .volume-up, .volume-down {
+    background: rgb(29, 29, 29);
+    height: 26px;
+    left: -4px;
+    position: absolute;
+    top: 92px;
+    width: 6px;
+}
+
+.volume-up {
+    top: 140px;
+    height: 50px;
+}
+
+.volume-down {
+    top: 200px;
+    height: 50px;
+}
+
+.lock {
+    background: rgb(29, 29, 29);
+    height: 50px;
+    right: -4px;
+    position: absolute;
+    top: 130px;
+    width: 6px;
+}
