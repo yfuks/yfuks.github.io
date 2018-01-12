@@ -193,7 +193,7 @@
 }
 
 @keyframes from-top-notification {
-    0%   { opacity: 0; height: 80px;width: 258px; font-size: 12px; top: 28%;}
+    0%   { opacity: 0; top: 20%;}
     50%  {opacity: 1;}
-    100% { opacity: 1; height: 91px; width: 298px; font-size: 15px; top: 30%;}
+    100% { opacity: 1; top: 30%;}
 }
