@@ -1,4 +1,23 @@
+/* FONTS */
+@font-face {
+    font-family: 'SanFrancisco';
+    src: url('/fonts/System San Francisco Display Regular.ttf');
+}
+
+@font-face {
+    font-family: 'SanFrancisco';
+    font-weight: bold;
+    src: url('/fonts/System San Francisco Display Bold.ttf');
+}
+
+@font-face {
+    font-family: 'SanFrancisco';
+    font-weight: thin;
+    src: url('/fonts/System San Francisco Display Thin.ttf');
+}
+
 .iphone {
+    font-family: 'SanFrancisco';
     height: 700px;
     width: 342px;
     margin-left: 28vw;
@@ -141,18 +160,30 @@
 }
 
 .title {
-    color: grey;
-    margin-left: 10px;
+    color: rgb(90, 90 ,90);
+    margin-left: 6px;
+    margin-top: 3px;
 }
 
 .nw-cor {
     display: flex;
-    color: rgb(50, 50 ,50);
+    color: rgb(60, 60 ,60);
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.date {
+    color: rgb(90, 90 ,90);
+    margin-left: 160px;
+    font-size: 12px;
+    margin-top: 4px;
 }
 
 .notification-message {
     display: flex;
     color: rgb(80, 80, 80);
+    font-size: 14px;
+    margin-top: 2px;
 }
 
 @keyframes from-top {
