@@ -18,7 +18,6 @@ $(window).resize(function() {
     var tmpWidth = $(window).width();
     if (width != tmpWidth) {
         width = tmpWidth;
-        initMap();
         moveProgressBar();
     }
 });
@@ -27,7 +26,6 @@ $(".profile-img").click(function(){
     $('.profile').animate({'margin-top' : '10px'}, 1000, function () {
         $('.description').show();
         moveProgressBar();
-        initMap();
     });
 });
 
@@ -48,4 +46,3 @@ function moveProgressBar() {
         }, animationLength);
     }
 }
-
