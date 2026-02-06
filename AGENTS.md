@@ -23,7 +23,7 @@ This document gives AI agents and contributors enough context to work effectivel
 - **Linting**: ESLint with `typescript-eslint`; the `any` type is banned (`@typescript-eslint/no-explicit-any`). Run `pnpm lint`.
 - **Components**: UI components extend native element props (e.g. `ButtonProps extends React.ComponentPropsWithoutRef<'button'>`). No polymorphic `as` prop; use native elements (e.g. `<a className="btn btn--primary">`) for link-style buttons.
 - **Hosting**: GitHub Pages (deploy/hosting via GitHub Pages; Vite `base` is `/` because this is a user site `yfuks.github.io`).
-- **i18n**: French and English are supported; keep both languages in mind for copy and UI.
+- **i18n**: English is the default language at `/`; French is available at `/fr`. Uses `react-i18next` with translations in `src/i18n/locales/en.json` and `src/i18n/locales/fr.json`. Language is driven by the URL path; add new copy to both locale files.
 
 ## Visual design primaries
 

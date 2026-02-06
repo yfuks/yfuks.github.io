@@ -21,6 +21,18 @@ export default defineConfig({
         )
       },
     },
+    {
+      // GitHub Pages: serve SPA for /fr and other non-file paths
+      name: 'copy-404',
+      closeBundle() {
+        const outDir = resolve(__dirname, 'dist')
+        const indexPath = resolve(outDir, 'index.html')
+        const notFoundPath = resolve(outDir, '404.html')
+        if (existsSync(indexPath)) {
+          copyFileSync(indexPath, notFoundPath)
+        }
+      },
+    },
   ],
   // GitHub Pages: user site is at yfuks.github.io, base is /
   base: '/',

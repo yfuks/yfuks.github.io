@@ -1,4 +1,5 @@
 import React, { type ReactNode } from 'react'
+import { useTranslation } from 'react-i18next'
 
 export function ProjectCard({ children, className = '', ...props }: React.ComponentPropsWithoutRef<'article'>) {
   return (
@@ -48,9 +49,10 @@ function ProjectCardDescription({ children }: { children?: ReactNode }) {
 }
 
 function ProjectCardTech({ tech }: { tech: string[] }) {
+  const { t } = useTranslation()
   return (
     <div className="project-tech-wrapper" aria-label="Tech stack">
-      <span className="project-tech-label">Tech:</span>
+      <span className="project-tech-label">{t('projects.techLabel')}</span>
       <div className="project-tech-list">
         {tech.map((item, index) => (
           <span key={index} className="project-tech-item">
@@ -63,9 +65,10 @@ function ProjectCardTech({ tech }: { tech: string[] }) {
 }
 
 function ProjectCardFeatures({ features }: { features: string[] }) {
+  const { t } = useTranslation()
   return (
     <div className="project-features-wrapper" aria-label="Features">
-      <span className="project-features-label">Features:</span>
+      <span className="project-features-label">{t('projects.featuresLabel')}</span>
       <ul className="project-features-list">
         {features.map((feature, index) => (
           <li key={index} className="project-feature-item">

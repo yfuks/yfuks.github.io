@@ -1,58 +1,97 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
+import { Link, useLocation } from 'react-router-dom'
 import { Card } from './components/ui/Card'
 import { Section } from './components/ui/Section'
 import { Header } from './components/Header'
-import { Link } from './components/ui/Link'
 import { ProjectCard } from './components/ProjectCard'
+import { GitHubIcon, LinkedInIcon, EmailIcon } from './components/Icons'
 
-interface Project {
-  id: string
-  title: string
-  subtitle: string
-  description: string
-  url?: string
-  tech?: string[]
-  features?: string[]
-  imageUrl?: string
-}
+const projectIds = ['salut-cheffe'] as const
 
-const projects: Project[] = [
-  {
-    id: 'salut-cheffe',
-    title: 'Salut Cheffe',
-    subtitle: 'Recipe site · Full‑stack',
-    description:
-      'French cooking recipe site for my sister, a cooking influencer. I built it alone with emphasis on SEO, accessibility and responsiveness.',
+const projectMeta: Record<
+  (typeof projectIds)[number],
+  { url: string; imageUrl: string }
+> = {
+  'salut-cheffe': {
     url: 'https://salutcheffe.com/',
-    tech: ['TypeScript', 'Next.js (ISR)', 'Supabase', 'Tailwind', 'GitHub Actions'],
-    features: [
-      'Dashboard to add & manage recipes and categories',
-      'Authentication (email, Google, Microsoft)',
-      'CI/CD with GitHub Actions',
-      'User reviews on recipes',
-    ],
     imageUrl: '/salutcheffe-preview.png',
   },
-]
+}
 
 function App() {
+  const { t } = useTranslation()
+  const { pathname } = useLocation()
+  const basePath = pathname.startsWith('/fr') ? '/fr' : ''
+
   return (
     <main>
       <Section>
         <div className="stack stack--page">
           <Header>
             <Header.Left>
-              <a href="#top" className="top-bar-logo" aria-label="Back to top of Yoann Fuks portfolio">
+              <a
+                href={`${basePath}#top`}
+                className="top-bar-logo"
+                aria-label={t('nav.backToTop')}
+              >
                 <span className="top-bar-logo-pill">yfuks</span>
               </a>
             </Header.Left>
             <Header.Right>
               <nav className="top-bar-nav" aria-label="Main">
-                <Link href="#about" className="top-bar-link">About</Link>
-                <Link href="#projects" className="top-bar-link">Portfolio</Link>
+                <Link to={`${basePath}#projects`} className="top-bar-link">
+                  {t('nav.portfolio')}
+                </Link>
+                <span className="top-bar-lang" aria-label="Language">
+                  <Link
+                    to="/"
+                    className={`top-bar-lang-link ${basePath === '' ? 'is-active' : ''}`}
+                    aria-current={basePath === '' ? 'page' : undefined}
+                  >
+                    EN
+                  </Link>
+                  <span className="top-bar-lang-sep" aria-hidden="true">
+                    /
+                  </span>
+                  <Link
+                    to="/fr"
+                    className={`top-bar-lang-link ${basePath === '/fr' ? 'is-active' : ''}`}
+                    aria-current={basePath === '/fr' ? 'page' : undefined}
+                  >
+                    FR
+                  </Link>
+                </span>
               </nav>
+              <div className="top-bar-social">
+                <a
+                  href="https://github.com/yfuks"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="top-bar-social-link"
+                  aria-label={t('hero.links.github')}
+                >
+                  <GitHubIcon />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/yoann-fuks/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="top-bar-social-link"
+                  aria-label={t('hero.links.linkedin')}
+                >
+                  <LinkedInIcon />
+                </a>
+                <a
+                  href="mailto:yoannfuks@gmail.com"
+                  className="top-bar-social-link"
+                  aria-label={t('hero.links.email')}
+                >
+                  <EmailIcon />
+                </a>
+              </div>
               <a href="/resume/" className="btn btn--primary top-bar-resume">
-                My resume
+                {t('nav.resume')}
               </a>
             </Header.Right>
           </Header>
@@ -61,23 +100,61 @@ function App() {
           <Card aria-label="About Yoann">
             <section id="about" className="stack hero-section">
               <div className="stack">
-                <div className="avatar" aria-hidden="true">
-                  <span className="avatar-initials">YF</span>
+                <div className="avatar">
+                  <img
+                    src="/yfuks.jpeg"
+                    alt=""
+                    className="avatar-image"
+                    aria-hidden="true"
+                  />
                 </div>
 
                 <div className="pill">
                   <span className="pill-dot" aria-hidden="true" />
-                  <span>Bonjour, I&apos;m Yoann</span>
+                  <span>{t('hero.greeting')}</span>
                 </div>
               </div>
 
               <div className="stack">
                 <h1 className="hero-heading">
-                  I build <span>full-stack</span> products.
+                  {t('hero.headline')}
                 </h1>
-                <blockquote className="hero-body hero-body--accent" cite="Yoann Fuks">
-                  "I create serious projects without taking myself too seriously."
+                <blockquote
+                  className="hero-body hero-body--accent"
+                  cite="Yoann Fuks"
+                >
+                  &quot;{t('hero.tagline')}&quot;
                 </blockquote>
+                <div className="hero-links">
+                  <a
+                    href="https://github.com/yfuks"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hero-link"
+                    aria-label={t('hero.links.github')}
+                  >
+                    <GitHubIcon />
+                    <span>{t('hero.links.github')}</span>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/yoann-fuks/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hero-link"
+                    aria-label={t('hero.links.linkedin')}
+                  >
+                    <LinkedInIcon />
+                    <span>{t('hero.links.linkedin')}</span>
+                  </a>
+                  <a
+                    href="mailto:yoann@yfuks.dev"
+                    className="hero-link"
+                    aria-label={t('hero.links.email')}
+                  >
+                    <EmailIcon />
+                    <span>{t('hero.links.email')}</span>
+                  </a>
+                </div>
               </div>
             </section>
           </Card>
@@ -88,39 +165,54 @@ function App() {
               <header className="projects-header">
                 <div className="pill pill--subtle">
                   <span className="pill-dot" aria-hidden="true" />
-                  <span>Projects / Projets</span>
+                  <span>{t('projects.sectionLabel')}</span>
                 </div>
-                <h2 className="projects-title">A few things I&apos;ve worked on</h2>
-                <p className="projects-intro">
-                  Selection of technical work, side‑projects and experiments. Detailed case
-                  studies are coming soon.
-                </p>
+                <h2 className="projects-title">{t('projects.title')}</h2>
+                <p className="projects-intro">{t('projects.intro')}</p>
               </header>
 
               <div className="projects-list">
-                {projects.map((project) => (
-                  <ProjectCard key={project.id}>
-                    {project.imageUrl && (
-                      <ProjectCard.Image src={project.imageUrl} alt={`${project.title} screenshot`} />
-                    )}
-                    <ProjectCard.Content>
-                      <ProjectCard.Title>{project.title}</ProjectCard.Title>
-                      <ProjectCard.Subtitle>{project.subtitle}</ProjectCard.Subtitle>
-                      <ProjectCard.Description>{project.description}</ProjectCard.Description>
-                      {project.tech && project.tech.length > 0 && (
-                        <ProjectCard.Tech tech={project.tech} />
+                {projectIds.map((id) => {
+                  const meta = projectMeta[id]
+                  const title = t(`projects.items.${id}.title`)
+                  const tech = t(`projects.items.${id}.tech`, {
+                    returnObjects: true,
+                  }) as string[]
+                  const features = t(`projects.items.${id}.features`, {
+                    returnObjects: true,
+                  }) as string[]
+
+                  return (
+                    <ProjectCard key={id}>
+                      {meta.imageUrl && (
+                        <ProjectCard.Image
+                          src={meta.imageUrl}
+                          alt={t('projects.screenshotAlt', { title })}
+                        />
                       )}
-                      {project.features && project.features.length > 0 && (
-                        <ProjectCard.Features features={project.features} />
-                      )}
-                      {project.url && (
-                        <ProjectCard.Link href={project.url}>
-                          View site / Voir le site
-                        </ProjectCard.Link>
-                      )}
-                    </ProjectCard.Content>
-                  </ProjectCard>
-                ))}
+                      <ProjectCard.Content>
+                        <ProjectCard.Title>{title}</ProjectCard.Title>
+                        <ProjectCard.Subtitle>
+                          {t(`projects.items.${id}.subtitle`)}
+                        </ProjectCard.Subtitle>
+                        <ProjectCard.Description>
+                          {t(`projects.items.${id}.description`)}
+                        </ProjectCard.Description>
+                        {tech.length > 0 && (
+                          <ProjectCard.Tech tech={tech} />
+                        )}
+                        {features.length > 0 && (
+                          <ProjectCard.Features features={features} />
+                        )}
+                        {meta.url && (
+                          <ProjectCard.Link href={meta.url}>
+                            {t('projects.viewSite')}
+                          </ProjectCard.Link>
+                        )}
+                      </ProjectCard.Content>
+                    </ProjectCard>
+                  )
+                })}
               </div>
             </section>
           </Card>

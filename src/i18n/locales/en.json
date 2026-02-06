@@ -1,0 +1,41 @@
+{
+  "nav": {
+    "about": "About",
+    "portfolio": "Projects",
+    "resume": "My resume",
+    "backToTop": "Back to top of Yoann Fuks portfolio"
+  },
+  "hero": {
+    "greeting": "Hello, I'm Yoann",
+    "headline": "I build full-stack products.",
+    "tagline": "I create serious projects without taking myself too seriously.",
+    "links": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "email": "Email"
+    }
+  },
+  "projects": {
+    "sectionLabel": "Projects",
+    "techLabel": "Tech:",
+    "featuresLabel": "Features:",
+    "title": "A few things I've worked on",
+    "intro": "Selection of technical work, side-projects and experiments..",
+    "viewSite": "View site",
+    "screenshotAlt": "{{title}} screenshot",
+    "items": {
+      "salut-cheffe": {
+        "title": "Salut Cheffe",
+        "subtitle": "Recipe site · Full-stack",
+        "description": "French cooking recipe site for my sister, a cooking influencer. I built it alone with emphasis on SEO, accessibility and responsiveness.",
+        "tech": ["TypeScript", "Next.js (ISR)", "Supabase", "Tailwind", "GitHub Actions"],
+        "features": [
+          "Dashboard to add & manage recipes and categories",
+          "Authentication (email, Google, Microsoft)",
+          "CI/CD with GitHub Actions",
+          "User reviews on recipes"
+        ]
+      }
+    }
+  }
+}

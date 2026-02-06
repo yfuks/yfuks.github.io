@@ -114,6 +114,33 @@ main {
   font-style: italic;
 }
 
+.hero-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+  font-size: 0.85rem;
+}
+
+.hero-link {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  padding: 4px 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.12s ease-out;
+}
+
+.hero-link:hover {
+  color: var(--color-text-main);
+}
+
+.hero-link svg {
+  flex-shrink: 0;
+}
+
 .pill {
   display: inline-flex;
   align-items: center;
@@ -144,6 +171,14 @@ main {
   font-weight: 700;
   font-size: 1.4rem;
   color: var(--color-text-main);
+  overflow: hidden;
+}
+
+.avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .avatar-initials {
@@ -217,6 +252,9 @@ main {
 
 /* Top bar */
 .top-bar {
+  position: sticky;
+  top: 16px;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -268,8 +306,63 @@ main {
   color: var(--color-text-main);
 }
 
+.top-bar-social {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 8px;
+}
+
+.top-bar-social-link {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  padding: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.12s ease-out;
+}
+
+.top-bar-social-link:hover {
+  color: var(--color-text-main);
+}
+
+.top-bar-social-link svg {
+  display: block;
+}
+
 .top-bar-resume {
   padding-inline: 18px;
+}
+
+.top-bar-lang {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-left: 8px;
+}
+
+.top-bar-lang-link {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  padding: 4px 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.top-bar-lang-link:hover {
+  color: var(--color-text-main);
+}
+
+.top-bar-lang-link.is-active {
+  color: var(--color-text-main);
+  font-weight: 600;
+}
+
+.top-bar-lang-sep {
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  opacity: 0.7;
 }
 
 .hero-section {
