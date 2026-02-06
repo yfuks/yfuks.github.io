@@ -276,8 +276,7 @@ main {
   scroll-margin-top: 32px;
 }
 
-.projects-section,
-.meta-section {
+.projects-section {
   scroll-margin-top: 72px;
 }
 
@@ -337,22 +336,6 @@ main {
 }
 
 .project-description {
-  margin: 0;
-  font-size: 0.9rem;
-  color: var(--color-text-muted);
-}
-
-/* Meta sections (skills, blog) */
-.meta-section {
-  padding: 0;
-}
-
-.meta-title {
-  margin: 0 0 4px;
-  font-size: 1rem;
-}
-
-.meta-body {
   margin: 0;
   font-size: 0.9rem;
   color: var(--color-text-muted);

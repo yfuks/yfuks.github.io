@@ -50,8 +50,6 @@ function App() {
               <nav className="top-bar-nav" aria-label="Main">
                 <Link href="#about" className="top-bar-link">About</Link>
                 <Link href="#projects" className="top-bar-link">Portfolio</Link>
-                <Link href="#skills" className="top-bar-link">Skills</Link>
-                <Link href="#blog" className="top-bar-link">Blog</Link>
               </nav>
               <a href="/resume/" className="btn btn--primary top-bar-resume">
                 My resume
@@ -108,27 +106,6 @@ function App() {
                   </article>
                 ))}
               </div>
-            </section>
-          </Card>
-
-          {/* Simple placeholders so top links scroll somewhere */}
-          <Card aria-label="Skills">
-            <section id="skills" className="meta-section">
-              <h2 className="meta-title">Skills</h2>
-              <p className="meta-body">
-                Full‑stack web, tooling, monitoring and developer experience. This section will
-                highlight concrete stacks and examples.
-              </p>
-            </section>
-          </Card>
-
-          <Card aria-label="Blog">
-            <section id="blog" className="meta-section">
-              <h2 className="meta-title">Blog</h2>
-              <p className="meta-body">
-                Short notes on things I&apos;m learning or building. Articles and snippets will
-                land here.
-              </p>
             </section>
           </Card>
         </div>
