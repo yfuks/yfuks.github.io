@@ -35,7 +35,7 @@ function App() {
           <Header>
             <Header.Left>
               <a href="#top" className="top-bar-logo" aria-label="Back to top of Yoann Fuks portfolio">
-                <span className="top-bar-logo-pill">yoann</span>
+                <span className="top-bar-logo-pill">yfuks</span>
               </a>
             </Header.Left>
             <Header.Right>
@@ -67,12 +67,11 @@ function App() {
 
               <div className="stack">
                 <h1 className="hero-heading">
-                  I build <span>full‑stack</span> stuff that actually works.
+                  I build <span>full-stack</span> products.
                 </h1>
-                <p className="hero-body">
-                  Code, products &amp; experiments. I like turning messy problems into small,
-                  well‑tested pieces that ship to production without drama.
-                </p>
+                <blockquote className="hero-body hero-body--accent" cite="Yoann Fuks">
+                  "I create serious projects without taking myself too seriously."
+                </blockquote>
               </div>
 
               <div className="hero-footer">

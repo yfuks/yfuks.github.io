@@ -113,6 +113,11 @@ main {
   max-width: 34rem;
 }
 
+.hero-body--accent {
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
 .pill {
   display: inline-flex;
   align-items: center;
@@ -236,7 +241,6 @@ main {
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.06em;
-  text-transform: lowercase;
 }
 
 .top-bar-nav {
