@@ -1,6 +1,8 @@
+import React from 'react'
 import { Card } from './components/ui/Card'
 import { Section } from './components/ui/Section'
 import { Header } from './components/Header'
+import { Link } from './components/ui/Link'
 
 interface Project {
   id: string
@@ -46,10 +48,10 @@ function App() {
             </Header.Left>
             <Header.Right>
               <nav className="top-bar-nav" aria-label="Main">
-                <a href="#about" className="top-bar-link">About</a>
-                <a href="#projects" className="top-bar-link">Portfolio</a>
-                <a href="#skills" className="top-bar-link">Skills</a>
-                <a href="#blog" className="top-bar-link">Blog</a>
+                <Link href="#about" className="top-bar-link">About</Link>
+                <Link href="#projects" className="top-bar-link">Portfolio</Link>
+                <Link href="#skills" className="top-bar-link">Skills</Link>
+                <Link href="#blog" className="top-bar-link">Blog</Link>
               </nav>
               <a href="/resume/" className="btn btn--primary top-bar-resume">
                 My resume
