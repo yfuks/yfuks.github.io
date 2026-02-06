@@ -45,7 +45,9 @@ jobs:
         run: pnpm build
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@3
+        # Use the GitHub Pages–specific artifact action (see:
+        # https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)
+        uses: actions/upload-pages-artifact@v4
         with:
           path: dist
 
@@ -58,4 +60,5 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deploy
-        uses: actions/deploy-pages@4
+        # Official GitHub Pages deploy action
+        uses: actions/deploy-pages@v4
