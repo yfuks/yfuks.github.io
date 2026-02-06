@@ -23,6 +23,13 @@ This document gives AI agents and contributors enough context to work effectivel
 - **Hosting**: GitHub Pages (deploy/hosting via GitHub Pages; Vite `base` is `/` because this is a user site `yfuks.github.io`).
 - **i18n**: French and English are supported; keep both languages in mind for copy and UI.
 
+### CI and GitHub Pages deployment
+
+- **Workflow**: `.github/workflows/deploy-pages.yml` builds and deploys the site on every push to `main` (and can be run manually via “Run workflow”).
+- **Requirement**: In the repo **Settings > Pages**, set **Source** to **GitHub Actions** (not “Deploy from a branch”). The workflow uses the `github-pages` environment and `actions/deploy-pages`.
+- **Build**: CI runs `pnpm install --frozen-lockfile` and `pnpm build`, then uploads the `dist/` folder as the Pages artifact.
+- **Branch**: The workflow triggers on pushes to `main` and `portfolio`; adjust `on.push.branches` in the workflow if you use other branch names.
+
 ## Guidelines for agents
 
 1. **Prioritize projects**: When adding or editing content, favor project showcases over resume-style content. Resume is secondary and linked, not the main narrative.
