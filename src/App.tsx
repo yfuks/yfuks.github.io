@@ -125,6 +125,9 @@ function App() {
                 >
                   &quot;{t('hero.tagline')}&quot;
                 </blockquote>
+                <p className="hero-body">
+                  {t('hero.languages')}
+                </p>
                 <div className="hero-links">
                   <a
                     href="https://github.com/yfuks"

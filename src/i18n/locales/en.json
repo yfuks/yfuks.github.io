@@ -9,6 +9,7 @@
     "greeting": "Hello, I'm Yoann",
     "headline": "I build full-stack products.",
     "tagline": "I create serious projects without taking myself too seriously.",
+    "languages": "I'm a TypeScript/JavaScript full-stack developer, but I've also used Python, Golang, Java, Kotlin, C++, C#, Objective-C, Swift, and learned programming in C.",
     "links": {
       "github": "GitHub",
       "linkedin": "LinkedIn",
