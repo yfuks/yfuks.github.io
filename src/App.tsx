@@ -1,9 +1,15 @@
-import { Card } from './components/ui/Card.jsx'
-import { Section } from './components/ui/Section.jsx'
-import { Button } from './components/ui/Button.jsx'
-import { Header } from './components/Header.jsx'
+import { Card } from './components/ui/Card'
+import { Section } from './components/ui/Section'
+import { Header } from './components/Header'
 
-const projects = [
+interface Project {
+  id: string
+  title: string
+  subtitle: string
+  description: string
+}
+
+const projects: Project[] = [
   {
     id: 'proj-1',
     title: 'Monitoring & tooling',
@@ -30,7 +36,7 @@ const projects = [
 function App() {
   return (
     <main>
-      <Section as="div">
+      <Section>
         <div className="stack stack--page">
           <Header>
             <Header.Left>
@@ -45,9 +51,9 @@ function App() {
                 <a href="#skills" className="top-bar-link">Skills</a>
                 <a href="#blog" className="top-bar-link">Blog</a>
               </nav>
-              <Button as="a" href="/resume/" variant="primary" className="top-bar-resume">
+              <a href="/resume/" className="btn btn--primary top-bar-resume">
                 My resume
-              </Button>
+              </a>
             </Header.Right>
           </Header>
 
@@ -75,15 +81,15 @@ function App() {
               </div>
 
               <div className="hero-footer">
-                <Button as="a" href="#projects" variant="primary">
+                <a href="#projects" className="btn btn--primary">
                   <span>View projects</span>
                   <span className="btn-icon" aria-hidden="true">
                     →
                   </span>
-                </Button>
-                <Button as="a" href="/resume/" variant="ghost">
+                </a>
+                <a href="/resume/" className="btn btn--ghost">
                   My resume
-                </Button>
+                </a>
               </div>
             </section>
           </Card>

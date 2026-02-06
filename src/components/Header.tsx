@@ -1,12 +1,14 @@
-export function Header({ children }) {
+import type { ReactNode } from 'react'
+
+export function Header({ children }: { children?: ReactNode }) {
   return <header className="top-bar">{children}</header>
 }
 
-function HeaderLeft({ children }) {
+function HeaderLeft({ children }: { children?: ReactNode }) {
   return <div className="top-bar-left">{children}</div>
 }
 
-function HeaderRight({ children }) {
+function HeaderRight({ children }: { children?: ReactNode }) {
   return <div className="top-bar-right">{children}</div>
 }
 

@@ -16,10 +16,12 @@ This document gives AI agents and contributors enough context to work effectivel
 
 ## Tech and deployment
 
-- **Stack**: React + Vite (manually scaffolded, not CRA).
+- **Stack**: React + Vite + TypeScript (manually scaffolded, not CRA).
 - **Package manager**: pnpm (`packageManager` is set in `package.json`; use `pnpm` for all installs and scripts).
 - **Scripts**: `pnpm dev` (local dev), `pnpm build` (builds to `dist/`), `pnpm preview` (serve built site locally).
-- **Entry points**: `index.html` at repo root, React app under `src/` (`main.jsx`, `App.jsx`, global styles in `index.css`).
+- **Entry points**: `index.html` at repo root, React app under `src/` (`main.tsx`, `App.tsx`, global styles in `index.css`). Config: `vite.config.ts`, `tsconfig.json`.
+- **Linting**: ESLint with `typescript-eslint`; the `any` type is banned (`@typescript-eslint/no-explicit-any`). Run `pnpm lint`.
+- **Components**: UI components extend native element props (e.g. `ButtonProps extends React.ComponentPropsWithoutRef<'button'>`). No polymorphic `as` prop; use native elements (e.g. `<a className="btn btn--primary">`) for link-style buttons.
 - **Hosting**: GitHub Pages (deploy/hosting via GitHub Pages; Vite `base` is `/` because this is a user site `yfuks.github.io`).
 - **i18n**: French and English are supported; keep both languages in mind for copy and UI.
 
