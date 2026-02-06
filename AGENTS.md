@@ -42,8 +42,9 @@ This document gives AI agents and contributors enough context to work effectivel
   - **Body**: Clean sans‑serif with comfortable line height for readability.
   - **Microcopy**: Smaller caps / pill labels for greetings and small descriptors.
 - **Cards and buttons**:
-  - **Buttons**: Rounded pill/rounded‑rectangle, clear hover states (slightly lighter background, subtle elevation).
+  - **Buttons**: Medium rounded (not full pill), clear hover states (slightly lighter background, subtle elevation).
   - **Avatar**: Illustrated or simple portrait inside a rounded container above the headline.
+- **Border radius**: A single CSS variable `--radius` (in `src/index.css`, currently `8px`) is used for consistent medium rounding site‑wide: card, top bar, pills, buttons, avatar, project cards. Do not use full pill (`999px`); keep corners medium-rounded for consistency.
 
 ### CI and GitHub Pages deployment
 

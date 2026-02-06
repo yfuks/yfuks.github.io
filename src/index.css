@@ -12,8 +12,7 @@
   --color-cta-bg: #111111;
   --color-cta-fg: #ffffff;
   --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.08);
-  --radius-card: 10px;
-  --radius-pill: 10px;
+  --radius: 8px;
 }
 
 *,
@@ -45,7 +44,7 @@ main {
 
 .card {
   background: var(--color-card);
-  border-radius: var(--radius-card);
+  border-radius: var(--radius);
   box-shadow: var(--shadow-soft);
   padding: 32px 24px 28px;
   position: relative;
@@ -118,7 +117,7 @@ main {
   align-items: center;
   gap: 8px;
   padding: 4px 12px;
-  border-radius: var(--radius-pill);
+  border-radius: var(--radius);
   font-size: 0.75rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -128,14 +127,14 @@ main {
 .pill-dot {
   width: 8px;
   height: 8px;
-  border-radius: 999px;
+  border-radius: 50%;
   background: var(--color-accent);
 }
 
 .avatar {
   width: 72px;
   height: 72px;
-  border-radius: 24px;
+  border-radius: var(--radius);
   background: radial-gradient(circle at 30% 20%, #ffe3d8, #ffb093);
   display: flex;
   align-items: center;
@@ -163,7 +162,7 @@ main {
   justify-content: center;
   gap: 8px;
   padding: 10px 18px;
-  border-radius: 999px;
+  border-radius: var(--radius);
   border: none;
   font-size: 0.9rem;
   font-weight: 600;
@@ -209,7 +208,7 @@ main {
   justify-content: space-between;
   gap: 16px;
   padding: 10px 14px;
-  border-radius: var(--radius-card);
+  border-radius: var(--radius);
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
 }
@@ -230,7 +229,7 @@ main {
   align-items: center;
   justify-content: center;
   padding: 6px 14px;
-  border-radius: var(--radius-pill);
+  border-radius: var(--radius);
   background: var(--color-accent);
   color: #ffffff;
   font-size: 0.85rem;
@@ -306,7 +305,7 @@ main {
 
 .project-card {
   padding: 16px 18px;
-  border-radius: 16px;
+  border-radius: var(--radius);
   background: rgba(255, 255, 255, 0.7);
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
 }
