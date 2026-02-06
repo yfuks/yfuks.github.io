@@ -161,8 +161,8 @@ main {
 }
 
 .avatar {
-  width: 72px;
-  height: 72px;
+  width: 200px;
+  height: 200px;
   border-radius: var(--radius);
   background: radial-gradient(circle at 30% 20%, #ffe3d8, #ffb093);
   display: flex;
@@ -367,6 +367,19 @@ main {
 
 .hero-section {
   scroll-margin-top: 32px;
+}
+
+@media (min-width: 720px) {
+  .hero-section {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  .hero-section > .stack:first-child {
+    flex-shrink: 0;
+    align-items: center;
+  }
 }
 
 .projects-section {
