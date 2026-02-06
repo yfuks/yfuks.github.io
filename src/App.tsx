@@ -40,9 +40,9 @@ function App() {
             </Header.Left>
             <Header.Right>
               <nav className="top-bar-nav" aria-label="Main">
-                <Link to={`${basePath}#projects`} className="top-bar-link">
+                <a href="#projects" className="top-bar-link">
                   {t('nav.portfolio')}
-                </Link>
+                </a>
                 <span className="top-bar-lang" aria-label="Language">
                   <Link
                     to="/"
