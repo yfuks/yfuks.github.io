@@ -81,18 +81,6 @@ function App() {
                   "I create serious projects without taking myself too seriously."
                 </blockquote>
               </div>
-
-              <div className="hero-footer">
-                <a href="#projects" className="btn btn--primary">
-                  <span>View projects</span>
-                  <span className="btn-icon" aria-hidden="true">
-                    →
-                  </span>
-                </a>
-                <a href="/resume/" className="btn btn--ghost">
-                  My resume
-                </a>
-              </div>
             </section>
           </Card>
 
