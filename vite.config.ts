@@ -15,8 +15,14 @@ export default defineConfig({
         if (!existsSync(resumeDir)) {
           mkdirSync(resumeDir, { recursive: true })
         }
+        // Copy PDF file
         copyFileSync(
-          resolve(__dirname, 'resume/rendercv_output/Yoann_Fuks_CV.html'),
+          resolve(__dirname, 'resume/rendercv_output/Yoann_Fuks_CV.pdf'),
+          resolve(resumeDir, 'Yoann_Fuks_CV.pdf')
+        )
+        // Copy HTML wrapper that embeds the PDF
+        copyFileSync(
+          resolve(__dirname, 'resume/resume-wrapper.html'),
           resolve(resumeDir, 'index.html')
         )
       },
