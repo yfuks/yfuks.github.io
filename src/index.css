@@ -35,12 +35,16 @@ main {
   align-items: center;
   justify-content: center;
   padding: 24px 16px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .page-container {
   max-width: 960px;
   width: 100%;
   margin-inline: auto;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .card {
@@ -50,6 +54,8 @@ main {
   padding: 32px 24px 28px;
   position: relative;
   overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .card::before,
@@ -80,6 +86,9 @@ main {
 .card-inner {
   position: relative;
   z-index: 1;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .stack {
@@ -97,6 +106,9 @@ main {
   font-weight: 800;
   letter-spacing: -0.03em;
   margin: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
 }
 
 .hero-heading span {
@@ -162,6 +174,7 @@ main {
 
 .avatar {
   width: 200px;
+  max-width: 100%;
   height: 200px;
   border-radius: var(--radius);
   background: radial-gradient(circle at 30% 20%, #ffe3d8, #ffb093);
@@ -172,6 +185,7 @@ main {
   font-size: 1.4rem;
   color: var(--color-text-main);
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .avatar-image {
@@ -264,7 +278,8 @@ main {
   background: rgba(255, 255, 255, 0.9);
   box-shadow: var(--shadow);
   flex-wrap: wrap;
-  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .top-bar-left {
@@ -278,9 +293,9 @@ main {
   align-items: center;
   gap: 16px;
   flex-wrap: wrap;
-  min-width: 0;
-  flex: 1;
+  flex: 1 1 auto;
   justify-content: flex-end;
+  min-width: 0;
 }
 
 .top-bar-logo-pill {
@@ -301,6 +316,8 @@ main {
   align-items: center;
   gap: 16px;
   font-size: 0.85rem;
+  flex-wrap: wrap;
+  min-width: 0;
 }
 
 .top-bar-link {
@@ -382,16 +399,21 @@ main {
 
   .top-bar-right {
     gap: 8px;
+    flex: 1 1 auto;
+    min-width: 0;
   }
 
   .top-bar-nav {
     gap: 8px;
     font-size: 0.8rem;
+    flex-wrap: wrap;
+    min-width: 0;
   }
 
   .top-bar-social {
     gap: 8px;
     margin-left: 4px;
+    flex-shrink: 0;
   }
 
   .top-bar-social-link {
@@ -406,6 +428,7 @@ main {
   .top-bar-lang {
     margin-left: 4px;
     gap: 1px;
+    flex-shrink: 0;
   }
 
   .top-bar-lang-link {
@@ -417,6 +440,7 @@ main {
     padding-inline: 12px;
     font-size: 0.85rem;
     white-space: nowrap;
+    flex-shrink: 0;
   }
 
   .top-bar-logo-pill {
@@ -427,6 +451,14 @@ main {
 
 /* Very small screens - hide some elements */
 @media (max-width: 480px) {
+  main {
+    padding: 16px 12px;
+  }
+
+  .card {
+    padding: 24px 16px 20px;
+  }
+
   .top-bar {
     padding: 6px 8px;
     gap: 6px;
@@ -438,6 +470,7 @@ main {
 
   .top-bar-nav {
     gap: 6px;
+    flex-wrap: wrap;
   }
 
   .top-bar-link {
