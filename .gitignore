@@ -1,0 +1,18 @@
+# Dependencies
+node_modules
+
+# Build
+dist
+
+# Local
+.env
+.env.local
+.env.*.local
+
+# Editor
+*.log
+.DS_Store
+
+# IDE
+.idea
+.vscode/*.sublime-*
