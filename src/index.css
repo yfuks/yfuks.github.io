@@ -263,17 +263,24 @@ main {
   border-radius: var(--radius);
   background: rgba(255, 255, 255, 0.9);
   box-shadow: var(--shadow);
+  flex-wrap: wrap;
+  min-width: 0;
 }
 
 .top-bar-left {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .top-bar-right {
   display: flex;
   align-items: center;
   gap: 16px;
+  flex-wrap: wrap;
+  min-width: 0;
+  flex: 1;
+  justify-content: flex-end;
 }
 
 .top-bar-logo-pill {
@@ -363,6 +370,89 @@ main {
   color: var(--color-text-muted);
   font-size: 0.75rem;
   opacity: 0.7;
+}
+
+/* Mobile responsive styles for top bar */
+@media (max-width: 719px) {
+  .top-bar {
+    padding: 8px 10px;
+    gap: 8px;
+    top: 8px;
+  }
+
+  .top-bar-right {
+    gap: 8px;
+  }
+
+  .top-bar-nav {
+    gap: 8px;
+    font-size: 0.8rem;
+  }
+
+  .top-bar-social {
+    gap: 8px;
+    margin-left: 4px;
+  }
+
+  .top-bar-social-link {
+    padding: 2px;
+  }
+
+  .top-bar-social-link svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .top-bar-lang {
+    margin-left: 4px;
+    gap: 1px;
+  }
+
+  .top-bar-lang-link {
+    padding: 4px 4px;
+    font-size: 0.75rem;
+  }
+
+  .top-bar-resume {
+    padding-inline: 12px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+
+  .top-bar-logo-pill {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Very small screens - hide some elements */
+@media (max-width: 480px) {
+  .top-bar {
+    padding: 6px 8px;
+    gap: 6px;
+  }
+
+  .top-bar-social {
+    display: none;
+  }
+
+  .top-bar-nav {
+    gap: 6px;
+  }
+
+  .top-bar-link {
+    font-size: 0.75rem;
+  }
+
+  .top-bar-resume {
+    padding-inline: 10px;
+    font-size: 0.8rem;
+  }
+
+  .top-bar-logo-pill {
+    padding: 4px 8px;
+    font-size: 0.75rem;
+  }
 }
 
 .hero-section {
