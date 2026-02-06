@@ -16,8 +16,11 @@ This document gives AI agents and contributors enough context to work effectivel
 
 ## Tech and deployment
 
-- **Stack**: React.
-- **Hosting**: GitHub Pages (deploy/hosting via GitHub Pages).
+- **Stack**: React + Vite (manually scaffolded, not CRA).
+- **Package manager**: pnpm (`packageManager` is set in `package.json`; use `pnpm` for all installs and scripts).
+- **Scripts**: `pnpm dev` (local dev), `pnpm build` (builds to `dist/`), `pnpm preview` (serve built site locally).
+- **Entry points**: `index.html` at repo root, React app under `src/` (`main.jsx`, `App.jsx`, global styles in `index.css`).
+- **Hosting**: GitHub Pages (deploy/hosting via GitHub Pages; Vite `base` is `/` because this is a user site `yfuks.github.io`).
 - **i18n**: French and English are supported; keep both languages in mind for copy and UI.
 
 ## Guidelines for agents
