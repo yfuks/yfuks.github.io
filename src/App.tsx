@@ -3,35 +3,35 @@ import { Card } from './components/ui/Card'
 import { Section } from './components/ui/Section'
 import { Header } from './components/Header'
 import { Link } from './components/ui/Link'
+import { ProjectCard } from './components/ProjectCard'
 
 interface Project {
   id: string
   title: string
   subtitle: string
   description: string
+  url?: string
+  tech?: string[]
+  features?: string[]
+  imageUrl?: string
 }
 
 const projects: Project[] = [
   {
-    id: 'proj-1',
-    title: 'Monitoring & tooling',
-    subtitle: 'Observability / dev‑experience',
+    id: 'salut-cheffe',
+    title: 'Salut Cheffe',
+    subtitle: 'Recipe site · Full‑stack',
     description:
-      'Dashboards, automation and small tools that make engineers faster and production calmer.',
-  },
-  {
-    id: 'proj-2',
-    title: 'Product experiments',
-    subtitle: 'Full‑stack prototypes',
-    description:
-      'From idea to usable MVP: APIs, frontends and a bit of design to validate concepts quickly.',
-  },
-  {
-    id: 'proj-3',
-    title: 'Open‑source & learning',
-    subtitle: 'Sharing along the way',
-    description:
-      'Tiny libraries, blog posts and learning projects—because writing and shipping is how I learn.',
+      'French cooking recipe site for my sister, a cooking influencer. I built it alone with emphasis on SEO, accessibility and responsiveness.',
+    url: 'https://salutcheffe.com/',
+    tech: ['TypeScript', 'Next.js (ISR)', 'Supabase', 'Tailwind', 'GitHub Actions'],
+    features: [
+      'Dashboard to add & manage recipes and categories',
+      'Authentication (email, Google, Microsoft)',
+      'CI/CD with GitHub Actions',
+      'User reviews on recipes',
+    ],
+    imageUrl: '/salutcheffe-preview.png',
   },
 ]
 
@@ -97,13 +97,29 @@ function App() {
                 </p>
               </header>
 
-              <div className="projects-grid">
+              <div className="projects-list">
                 {projects.map((project) => (
-                  <article key={project.id} className="project-card">
-                    <h3 className="project-title">{project.title}</h3>
-                    <p className="project-subtitle">{project.subtitle}</p>
-                    <p className="project-description">{project.description}</p>
-                  </article>
+                  <ProjectCard key={project.id}>
+                    {project.imageUrl && (
+                      <ProjectCard.Image src={project.imageUrl} alt={`${project.title} screenshot`} />
+                    )}
+                    <ProjectCard.Content>
+                      <ProjectCard.Title>{project.title}</ProjectCard.Title>
+                      <ProjectCard.Subtitle>{project.subtitle}</ProjectCard.Subtitle>
+                      <ProjectCard.Description>{project.description}</ProjectCard.Description>
+                      {project.tech && project.tech.length > 0 && (
+                        <ProjectCard.Tech tech={project.tech} />
+                      )}
+                      {project.features && project.features.length > 0 && (
+                        <ProjectCard.Features features={project.features} />
+                      )}
+                      {project.url && (
+                        <ProjectCard.Link href={project.url}>
+                          View site / Voir le site
+                        </ProjectCard.Link>
+                      )}
+                    </ProjectCard.Content>
+                  </ProjectCard>
                 ))}
               </div>
             </section>
