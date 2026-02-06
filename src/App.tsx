@@ -7,15 +7,20 @@ import { Header } from './components/Header'
 import { ProjectCard } from './components/ProjectCard'
 import { GitHubIcon, LinkedInIcon, EmailIcon } from './components/Icons'
 
-const projectIds = ['salut-cheffe'] as const
+const projectIds = ['salut-cheffe', 'portfolio'] as const
 
 const projectMeta: Record<
   (typeof projectIds)[number],
-  { url: string; imageUrl: string }
+  { url: string; imageUrl?: string; isCodeLink?: boolean }
 > = {
   'salut-cheffe': {
     url: 'https://salutcheffe.com/',
     imageUrl: '/salutcheffe-preview.png',
+  },
+  portfolio: {
+    url: 'https://github.com/yfuks/yfuks.github.io',
+    imageUrl: '/portfolio.png',
+    isCodeLink: true,
   },
 }
 
@@ -217,7 +222,9 @@ function App() {
                         )}
                         {meta.url && (
                           <ProjectCard.Link href={meta.url}>
-                            {t('projects.viewSite')}
+                            {meta.isCodeLink
+                              ? t('projects.viewCode')
+                              : t('projects.viewSite')}
                           </ProjectCard.Link>
                         )}
                       </ProjectCard.Content>

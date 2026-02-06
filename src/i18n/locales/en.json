@@ -24,18 +24,31 @@
     "title": "A few things I've worked on",
     "intro": "Selection of technical work, side-projects and experiments..",
     "viewSite": "View site",
+    "viewCode": "View code",
     "screenshotAlt": "{{title}} screenshot",
     "items": {
       "salut-cheffe": {
         "title": "Salut Cheffe",
         "subtitle": "Recipe site · Full-stack",
-        "description": "French cooking recipe site for my sister, a cooking influencer. I built it alone with emphasis on SEO, accessibility and responsiveness.",
+        "description": "French cooking recipe site for my sister, a cooking influencer. I built it with emphasis on SEO, accessibility and responsiveness.",
         "tech": ["TypeScript", "Next.js (ISR)", "Supabase", "Tailwind", "GitHub Actions"],
         "features": [
           "Dashboard to add & manage recipes and categories",
           "Authentication (email, Google, Microsoft)",
           "CI/CD with GitHub Actions",
           "User reviews on recipes"
+        ]
+      },
+      "portfolio": {
+        "title": "Portfolio",
+        "subtitle": "Personal portfolio · React + Vite",
+        "description": "This very portfolio website showcasing my projects and work. Built with React, Vite, and TypeScript, featuring i18n support (English/French), responsive design, and deployed via GitHub Pages.",
+        "tech": ["TypeScript", "React", "Vite", "react-i18next", "GitHub Pages"],
+        "features": [
+          "Bilingual support (English/French)",
+          "Responsive design with modern UI",
+          "CI/CD with GitHub Actions",
+          "Accessible and SEO-friendly"
         ]
       }
     }
