@@ -163,7 +163,7 @@ function App() {
                     <span>{t('hero.links.linkedin')}</span>
                   </a>
                   <a
-                    href="mailto:yoann@yfuks.dev"
+                    href="mailto:yoannfuks@gmail.com"
                     className="hero-link"
                     aria-label={t('hero.links.email')}
                   >
