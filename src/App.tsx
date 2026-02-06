@@ -1,5 +1,5 @@
 import React from 'react'
-import { useTranslation } from 'react-i18next'
+import { useTranslation, Trans } from 'react-i18next'
 import { Link, useLocation } from 'react-router-dom'
 import { Card } from './components/ui/Card'
 import { Section } from './components/ui/Section'
@@ -115,10 +115,13 @@ function App() {
                 </div>
               </div>
 
-              <div className="stack">
+              <div className="stack stack--tight">
                 <h1 className="hero-heading">
                   {t('hero.headline')}
                 </h1>
+                <p className="hero-body hero-body--location">
+                  {t('hero.location')}
+                </p>
                 <blockquote
                   className="hero-body hero-body--accent"
                   cite="Yoann Fuks"
@@ -126,7 +129,12 @@ function App() {
                   &quot;{t('hero.tagline')}&quot;
                 </blockquote>
                 <p className="hero-body">
-                  {t('hero.languages')}
+                  <Trans
+                    i18nKey="hero.languages"
+                    components={{
+                      bold: <strong />,
+                    }}
+                  />
                 </p>
                 <div className="hero-links">
                   <a

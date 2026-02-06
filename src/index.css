@@ -101,6 +101,10 @@ main {
   gap: 40px;
 }
 
+.stack--tight {
+  gap: 8px;
+}
+
 .hero-heading {
   font-size: clamp(2.1rem, 3.3vw + 1.3rem, 2.9rem);
   font-weight: 800;
@@ -119,11 +123,17 @@ main {
   color: var(--color-text-muted);
   font-size: 0.98rem;
   max-width: 34rem;
+  margin: 0;
 }
 
 .hero-body--accent {
   font-size: 0.9rem;
   font-style: italic;
+  margin: 0;
+}
+
+.hero-body--location {
+  margin-top: 4px;
 }
 
 .hero-links {
@@ -131,7 +141,7 @@ main {
   align-items: center;
   gap: 16px;
   flex-wrap: wrap;
-  margin-top: 4px;
+  margin-top: 8px;
   font-size: 0.85rem;
 }
 
